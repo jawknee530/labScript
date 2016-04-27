@@ -1,0 +1,32 @@
+#! /bin/sh
+
+if [ $# != 2 ]; then
+  echo " Use flags -long, -short, or -all"
+  echo "-long will do the runs for one and two cores"
+  echo "-short will do the runs for 5, 10, 20, and 30"
+  echo "-all will do both long and short"
+  echo " After the flag enter a number for amount of"
+  echo " times to do all the runs. For example:"
+  echo " submit -all 5"
+  echo " will do all 6 core counts all five times for"
+  echo " a total of 30 runs"
+else
+rm -f *.o* combined-output
+  if [ $1 == "-long" ] || [ $1 == "-all" ]; then
+    for i in `seq 1 $2`;
+    do
+      qsub -v OMP_NUM_THREADS=1 -l select=1:ncpus=1 ./run -F "1"
+      qsub -v OMP_NUM_THREADS=2 -l select=1:ncpus=2 ./run -F "2"
+    done
+  fi
+    
+  if [ $1 == "-short" ] || [ $1 == "-all" ]; then
+    for i in `seq 1 $2`;
+    do
+      qsub -v OMP_NUM_THREADS=5 -l select=1:ncpus=5 ./run -F "5"
+      qsub -v OMP_NUM_THREADS=10 -l select=1:ncpus=10 ./run -F "10"
+      qsub -v OMP_NUM_THREADS=20 -l select=1:ncpus=20 ./run -F "20"
+      qsub -v OMP_NUM_THREADS=30 -l select=1:ncpus=30 ./run -F "30"
+    done
+  fi
+fi
