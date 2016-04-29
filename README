@@ -1,3 +1,4 @@
+
 There are 30 total runs that need to be completed. Six different cpu amounts
 (1, 2, 5, 10, 20, 30) and five runs for each cpu amount. The script will add one
 submission per run to qstat. Once your runs are complete a file will appear for
@@ -23,3 +24,4 @@ will do all 30 necessary runs.
 WARNING:
 Every time you run 'submit' it will remove all *.o* files which will get rid of
 all your results if you have not yet combined them using the 'combine' script.
+
