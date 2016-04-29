@@ -1,15 +1,7 @@
 #! /bin/sh
 
 if [ $# != 2 ]; then
-  echo " Use flags -long, -short, or -all"
-  echo "-long will do the runs for one and two cores"
-  echo "-short will do the runs for 5, 10, 20, and 30"
-  echo "-all will do both long and short"
-  echo " After the flag enter a number for amount of"
-  echo " times to do all the runs. For example:"
-  echo " submit -all 5"
-  echo " will do all 6 core counts all five times for"
-  echo " a total of 30 runs"
+  cat README
 else
 rm -f *.o* 
   if [ $1 == "-long" ] || [ $1 == "-all" ]; then
