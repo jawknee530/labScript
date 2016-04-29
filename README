@@ -2,7 +2,8 @@
 There are 30 total runs that need to be completed. Six different cpu amounts
 (1, 2, 5, 10, 20, 30) and five runs for each cpu amount. The script will add one
 submission per run to the queue. Once your runs are complete a file will appear 
-for each run in your directory. Running the 'combine' script will combine all ofthose files into a single one.
+for each run in your directory. Running the 'combine' script will combine all 
+ofthose files into a single one.
 
 YOU MUST EDIT THE 'RUN' SCRIPT
 You have to replace three things in the script. 
