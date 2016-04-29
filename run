@@ -2,7 +2,7 @@
 ### script to run one job
 
 ### Set the job name
-#PBS -N REPLACE_NAME
+#PBS -N REPLACE_JOB_NAME
 
 ### Join the standard output and standard error streams
 #PBS -j oe
@@ -15,4 +15,4 @@ cd ~jch/jch-sREPLACE_NUMBER
 
 ### record the date, then time your executable program
 date
-/usr/bin/time ./REPLACE_NAME "8000" "$1"
+/usr/bin/time ./REPLACE_EXECUTABLE_NAME "8000" "$1"

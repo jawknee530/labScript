@@ -4,6 +4,12 @@ submission per run to qstat. Once your runs are complete a file will appear for
 each run in your directory. Running the 'combine' script will combine all of 
 those files into a single one.
 
+YOU MUST EDIT THE 'RUN' SCRIPT
+You have to replace three things in the script. 
+REPLACE_JOB_NAME needs to be whatever you want your jobs to show up in qstat.
+REPLACE_NUMBER needs to be your account number. Make sure to leave the 'jch-s'
+REPLACE_EXECUTABLE_NAME needs to be... the name of your executable.
+
 The script 'submit' takes two flages. The first one is either -long or -short, 
 or -all.
 -long will do the runs for 1 and 2 cores.
