@@ -1,0 +1,17 @@
+There are 30 total runs that need to be completed. Six different cpu amounts
+(1, 2, 5, 10, 20, 30) and five runs for each cpu amount. The script will add one
+submission per run to qstat. Once your runs are complete a file will appear for
+each run in your directory. Running the 'combine' script will combine all of 
+those files into a single one.
+
+The script 'submit' takes two flages. The first one is either -long or -short.
+-long will do the runs for 1 and 2 cores.
+-short will do the runs for 5, 10, 20, and 30 cores.
+The second flag needs to be a number between 1 and 5 (inclusive). This number
+will decide how many runs to do for each amount. For example:
+./submit -all 5
+will do all 30 necessary runs.
+
+WARNING:
+Every time you run 'submit' it will remove all *.o* files which will get rid of
+all your results if you have not yet combined them using the 'combine' script.

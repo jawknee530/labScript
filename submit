@@ -11,7 +11,7 @@ if [ $# != 2 ]; then
   echo " will do all 6 core counts all five times for"
   echo " a total of 30 runs"
 else
-rm -f *.o* combined-output
+rm -f *.o* 
   if [ $1 == "-long" ] || [ $1 == "-all" ]; then
     for i in `seq 1 $2`;
     do
