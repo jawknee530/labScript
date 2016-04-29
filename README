@@ -4,9 +4,11 @@ submission per run to qstat. Once your runs are complete a file will appear for
 each run in your directory. Running the 'combine' script will combine all of 
 those files into a single one.
 
-The script 'submit' takes two flages. The first one is either -long or -short.
+The script 'submit' takes two flages. The first one is either -long or -short, 
+or -all.
 -long will do the runs for 1 and 2 cores.
 -short will do the runs for 5, 10, 20, and 30 cores.
+-all will do the runs for all six core counts.
 The second flag needs to be a number between 1 and 5 (inclusive). This number
 will decide how many runs to do for each amount. For example:
 ./submit -all 5
