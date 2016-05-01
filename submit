@@ -3,7 +3,7 @@
 if [ $# != 2 ]; then
   cat README
 else
-rm -f *.o* 
+#rm -f *.o* 
   if [ $1 == "-long" ] || [ $1 == "-all" ]; then
     for i in `seq 1 $2`;
     do

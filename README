@@ -21,7 +21,4 @@ will decide how many runs to do for each amount. For example:
 ./submit -all 5
 will do all 30 necessary runs.
 
-WARNING:
-Every time you run 'submit' it will remove all *.o* files which will get rid of
-all your results if you have not yet combined them using the 'combine' script.
 
