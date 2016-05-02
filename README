@@ -12,13 +12,16 @@ REPLACE_NUMBER needs to be your account number. Make sure to leave the 'jch-s'
 REPLACE_EXECUTABLE_NAME needs to be... the name of your executable.
 
 The script 'submit' takes two flages. The first one is either -long or -short, 
-or -all.
+, -all, or -test.
 -long will do the runs for 1 and 2 cores.
 -short will do the runs for 5, 10, 20, and 30 cores.
 -all will do the runs for all six core counts.
+-test will run just the 30 core run since it's fastest.
 The second flag needs to be a number between 1 and 5 (inclusive). This number
 will decide how many runs to do for each amount. For example:
 ./submit -all 5
 will do all 30 necessary runs.
+./submit -test 1 
+will run the test
 
 

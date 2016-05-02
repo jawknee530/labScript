@@ -21,4 +21,8 @@ else
       qsub -v OMP_NUM_THREADS=30 -l select=1:ncpus=30 ./run -F "30"
     done
   fi
+
+  if [ $1 == "-test" ]; then
+    qsub -v OMP_NUM_THREADS=30 -l select=1:ncpus=30 ./run -F "30"
+  fi
 fi
